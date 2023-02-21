@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import{ Component } from '@angular/core';
 
 @Component({
   selector: 'app-My-SlotMachine',
@@ -24,9 +24,9 @@ export class SlotMachineComponent {
     this.Symbols.push("O");
     this.Symbols.push("W");
 
-    let firstSlot = this.GetRandomInt(0,1);
-    let secondSlot = this.GetRandomInt(0,1);
-    let thirdSlot = this.GetRandomInt(0,1);
+    let firstSlot = this.GetRandomInt(0,4);
+    let secondSlot = this.GetRandomInt(0,4);
+    let thirdSlot = this.GetRandomInt(0,4);
 
     this.isSpinning = true;
     await this.delay(3000);
@@ -61,6 +61,16 @@ export class SlotMachineComponent {
     return Math.floor(Math.random() * (max-min)+min);
     //Max is exclusive and min is inclusive
   }
+  delay(ms: number) {
+    return new Promise(resolve = setTimeout(resolve, ms));
+  }
 
+  CashOut() {
+    alert("Congrats, you have earned ${this.credits} credits");
+    this.credits=10
+    this.firstSymbol = "";
+    this.secondSymbol = "";
+    this.thirdSymbol = "";
+  }
 }
 
