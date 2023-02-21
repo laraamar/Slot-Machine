@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SlotMachineComponent } from ./Slot-Machine\src\app\SlotMachine\SlotMachine.component.ts
+import { SlotMachineComponent } from C:\Users\625808\My-Slot-Machine\Slot-Machine\src\app\SlotMachine\SlotMachine.component.ts
 const routes: Routes = [];
 
 @NgModule({

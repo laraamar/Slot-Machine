@@ -2,28 +2,32 @@
 <style>
 table, th, td {
   border:2px solid red;
+  }
+body {
+background-color:gold;
 }
 </style><h1>You currently have {{credits}} credits.</h1>
 <div *ngIf="!this.isSpinning">
-  <table style="width:100%">
-    <tr>
-      <th>{{firstSymbol}}</th>
-      <th>{{secondSymbol}}</th>
-      <th>{{thirdSymbol}}</th>
-    </tr>
-  </table>
-</div>
-<div *ngIf="this.isSpinning">
-  <table style="width:100%">
-    <tr>
-      <th>X</th>
-      <th>X</th>
-      <th>X</th>
-    </tr>
-  </table>
+  <body>
+    <table style="width:100%">
+      <tr>
+        <th>{{firstSymbol}}</th>
+        <th>{{secondSymbol}}</th>
+        <th>{{thirdSymbol}}</th>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="this.isSpinning">
+    <table style="width:100%">
+      <tr>
+        <th>X</th>
+        <th>X</th>
+        <th>X</th>
+      </tr>
+    </table>
 </div>
 <button [disabled]="this.isSpinning" (click)="Spin()">Spin</button>
 <button (click)="CashOut()">Cash Out</button>
-
+</body>
 </html>
 
