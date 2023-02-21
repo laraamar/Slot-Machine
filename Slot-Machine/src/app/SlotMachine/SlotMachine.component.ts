@@ -8,3 +8,8 @@ import { Component } from '@angular/core';
 export class SlotMachineComponent {
   title = 'Slot-Machine';
 }
+Spin() {
+
+
+}
+}
