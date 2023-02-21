@@ -1,4 +1,9 @@
-<h1>You currently have {{credits}} credits.</h1>
+<html>
+<style>
+table, th, td {
+  border:2px solid red;
+}
+</style><h1>You currently have {{credits}} credits.</h1>
 <div *ngIf="!this.isSpinning">
   <table style="width:100%">
     <tr>
@@ -20,4 +25,5 @@
 <button [disabled]="this.isSpinning" (click)="Spin()">Spin</button>
 <button (click)="CashOut()">Cash Out</button>
 
+</html>
 
